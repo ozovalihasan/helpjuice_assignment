@@ -1,4 +1,32 @@
-<div>
-  <h1 class="font-bold text-4xl">Articles::Searches#index</h1>
-  <p>Find me in app/views/articles/searches/index.html.erb</p>
-</div>
+<turbo-frame id="products-search-bar" >
+
+  <div class="w-full flex items-center h-full" ">
+    <div class="bottom-unset px-16 inset-x-0 flex z-100 shadow-none w-full">
+      <div class=" relative h-12 flex">
+        <%= form_with(
+          url: articles_searches_path,
+          method: :get,
+          data: {
+            turbo_frame: "results",
+            controller: "search-form"
+          }
+        ) do |form| %>
+          <%= 
+            form.text_field :search_term, 
+              placeholder: 'Search articles', 
+              minlength:3,
+              data: {
+                action: "input->search-form#search"
+              }
+          %>
+      
+        <% end %>
+      </div>
+    </div>
+  </div>
+</turbo-frame>
+
+
+<turbo-frame id="results">
+  <%= "@articles" %>
+</turbo-frame>
