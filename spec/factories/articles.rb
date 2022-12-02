@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :article do
-    title { Faker::Lorem.sentence(word_count: 3, supplemental: false, random_words_to_add: 4) }
-    body { Faker::Lorem.paragraph }
+    title { Faker::Lorem.sentence(word_count: 3) + Search.all.sample.keywords + Faker::Lorem.sentence(word_count: 3) }
+    body { Faker::Quote.matz }
   end
 end
 
