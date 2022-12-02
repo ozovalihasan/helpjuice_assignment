@@ -12,7 +12,7 @@
           }
         ) do |form| %>
           <%= 
-            form.text_field :search_term, 
+            form.text_field :keywords, 
               placeholder: 'Search articles', 
               minlength:3,
               data: {
@@ -26,7 +26,14 @@
   </div>
 </turbo-frame>
 
-
 <turbo-frame id="results">
-  <%= "@articles" %>
+  <% if @articles.empty? %>
+    There is no an article to show.
+  <% end %>
+  <% @articles.map do |article| %>
+    <div class="py-4">
+      <div class="text-lg"> <%= article.title %> </div>
+      <div> <%= article.body %> </div>
+    </div>
+  <% end %>
 </turbo-frame>
