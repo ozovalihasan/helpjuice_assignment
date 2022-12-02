@@ -1,0 +1,2 @@
+module Articles::SearchesHelper
+end
