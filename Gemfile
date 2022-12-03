@@ -70,4 +70,3 @@ end
 
 gem 'faker', '~> 3.0'
 gem 'factory_bot_rails', '~> 6.2'
-gem 'delayed_job_active_record'
