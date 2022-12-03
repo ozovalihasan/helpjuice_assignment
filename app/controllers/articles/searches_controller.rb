@@ -1,9 +1,11 @@
 class Articles::SearchesController < ApplicationController
   def index
-    if search_params[:keywords].present?
+    @keywords = search_params[:keywords]
+    
+    if @keywords.present?
       @search = Search.create(search_params)
       FilterSearchesJob.perform_async(@search.id)
-      @articles = Article.search(@search[:keywords])
+      @articles = Article.search(@keywords)
     else
       @articles = Article.limit(5).order("RANDOM()")
     end
