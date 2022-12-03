@@ -4,7 +4,9 @@ RSpec.describe "articles/keywords/index", type: :view do
   
   before(:each) {
     FactoryBot.rewind_sequences
-    FactoryBot.create_list(:mock_search, 2)
+    travel_to Time.zone.local(2020, 10, 1, 00, 00, 00) do
+      FactoryBot.create_list(:mock_search, 2 )
+    end
     
   }
 
