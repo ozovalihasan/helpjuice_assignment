@@ -1,1 +1,1 @@
-release: bundle exec sidekiq -c 2
+jobs: bundle exec sidekiq -c 2
