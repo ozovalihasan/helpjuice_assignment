@@ -7,7 +7,7 @@ class Articles::SearchesController < ApplicationController
       FilterSearchesJob.perform_async(@search.id)
       @articles = Article.search(@keywords)
     else
-      @articles = Article.limit(5).order("RANDOM()")
+      @articles = Article.limit(5).order(created_at: :desc)
     end
   end
 
