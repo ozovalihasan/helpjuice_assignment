@@ -72,6 +72,7 @@ group :test do
   gem 'rails-controller-testing'
   gem 'rspec-snapshot'
   gem 'capybara'
+  gem 'webdrivers', '~> 5.2'
 end
 
 gem 'faker', '~> 3.0'
