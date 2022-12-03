@@ -1,4 +1,4 @@
-<turbo-frame class="flex items-center" >
+<turbo-frame class="flex items-center gap-2" >
 
   <%= form_with(
     url: articles_searches_path,
@@ -18,15 +18,17 @@
           action: "input->search-form#search"
         }
     %>
-    <%= link_to "Keywords", articles_keywords_path, data: {turbo_frame: "results"} %>
+
   <% end %>
+
+  <%= link_to "Keywords", articles_keywords_path, class: "border border-solid rounded-lg p-4 text-xl" ,data: {turbo_frame: "results"} %>
 </turbo-frame>
 
 <turbo-frame id="results" class="min-w-96 w-1/2">
   
-  <div class="py-8 border-b border-solid ">
+  <div class="py-8 border-b border-solid text-xl">
     <% if @keywords.present? %>
-      Results for <%= @keywords %>
+      Results for "<%= @keywords %>""
     <% else %>
       Last articles
     <% end %>

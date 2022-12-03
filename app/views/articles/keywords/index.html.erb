@@ -1,10 +1,12 @@
 <turbo-frame id="results" class="min-w-96 w-1/2">
     
-  <% @searches.map do |search| %>
-    <div class="py-4">
-      <div class="text-lg"> <%= search.keywords %> </div>
-      <div> <%= search.created_at %> </div>
-    </div>
-  <% end %>
+  <div class="my-8">
+    <% @searches.map do |search| %>
+      <div class="py-4 flex items-center hover:bg-gray-100">
+        <div class="text-lg"> <%= search.keywords %> </div>
+        <div class="text-lg ml-auto"> <%= search.created_at %> </div>
+      </div>
+    <% end %>
+  </div>
   
 </turbo-frame>
