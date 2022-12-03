@@ -1,34 +1,30 @@
-<turbo-frame id="products-search-bar" >
+<turbo-frame class="flex items-center" >
 
-  <div class="w-full items-center h-full">
-    <div class="bottom-unset px-16 inset-x-0 flex z-100 shadow-none w-full">
-      <div class=" relative h-12 flex">
-        <%= form_with(
-          url: articles_searches_path,
-          method: :get,
-          data: {
-            turbo_frame: "results",
-            controller: "search-form"
-          }
-        ) do |form| %>
-          <%= 
-            form.text_field :keywords, 
-              placeholder: 'Search articles', 
-              minlength:3,
-              data: {
-                action: "input->search-form#search"
-              }
-          %>
-      
-        <% end %>
-      </div>
-    </div>
-  </div>
+  <%= form_with(
+    url: articles_searches_path,
+    method: :get,
+    data: {
+      turbo_frame: "results",
+      controller: "search-form"
+    },
+    class: "self-center"
+  ) do |form| %>
+    <%= 
+      form.text_field :keywords, 
+        placeholder: 'Search articles', 
+        minlength:3,
+        class: "w-96 rounded-xl p-4 text-xl self-center shadow-none border-2 border-solid",
+        data: {
+          action: "input->search-form#search"
+        }
+    %>
+
+  <% end %>
 </turbo-frame>
 
-<turbo-frame id="results">
+<turbo-frame id="results" class="min-w-96 w-1/2">
   
-  <div class="">
+  <div class="py-8 border-b border-solid ">
     <% if @keywords.present? %>
       Results for <%= @keywords %>
     <% else %>
