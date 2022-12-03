@@ -44,15 +44,18 @@
       Last articles
   </div>
 
+    
+      <div class="py-4">
+        <div class="text-lg"> title_2 </div>
+        <div> body_2 keywords_2 </div>
+      </div>
+      <div class="py-4">
+        <div class="text-lg"> title_1 </div>
+        <div> body_1 keywords_1 </div>
+      </div>
+
   
-    <div class="py-4">
-      <div class="text-lg"> title_2 </div>
-      <div> body_2 keywords_2 </div>
-    </div>
-    <div class="py-4">
-      <div class="text-lg"> title_1 </div>
-      <div> body_1 keywords_1 </div>
-    </div>
+  
   
 </turbo-frame>
     </main>
