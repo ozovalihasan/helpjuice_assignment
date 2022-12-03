@@ -1,0 +1,27 @@
+<turbo-frame class="flex items-center" >
+
+  <form class="self-center" data-turbo-frame="results" data-controller="search-form" action="/articles/searches" accept-charset="UTF-8" method="get">
+    <input placeholder="Search articles" minlength="3" class="w-96 rounded-xl p-4 text-xl self-center shadow-none border-2 border-solid" data-action="input-&gt;search-form#search" type="text" name="keywords" id="keywords" />
+
+</form></turbo-frame>
+
+<turbo-frame id="results" class="min-w-96 w-1/2">
+  
+  <div class="py-8 border-b border-solid ">
+      Last articles
+  </div>
+
+    
+      <div class="py-4">
+        <div class="text-lg"> title_1 </div>
+        <div> body_1 keywords_1 </div>
+      </div>
+      <div class="py-4">
+        <div class="text-lg"> title_2 </div>
+        <div> body_2 keywords_2 </div>
+      </div>
+
+  
+  
+  
+</turbo-frame>

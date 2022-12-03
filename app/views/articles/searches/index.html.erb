@@ -34,13 +34,17 @@
 
   <% if @articles.empty? %>
     There is no an article to show.
+  <% else %>
+    
+    <% @articles.map do |article| %>
+      <div class="py-4">
+        <div class="text-lg"> <%= article.title %> </div>
+        <div> <%= article.body %> </div>
+      </div>
+    <% end %>
+
   <% end %>
   
-  <% @articles.map do |article| %>
-    <div class="py-4">
-      <div class="text-lg"> <%= article.title %> </div>
-      <div> <%= article.body %> </div>
-    </div>
-  <% end %>
+  
   
 </turbo-frame>
