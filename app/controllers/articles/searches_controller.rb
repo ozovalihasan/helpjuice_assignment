@@ -2,7 +2,8 @@ class Articles::SearchesController < ApplicationController
   def index
     if search_params[:keywords].present?
       @search = Search.create(search_params)
-      @articles = Article.search(search_params[:keywords])
+      SaveSearchJob.perform_later(@search.created_at)
+      @articles = Article.search(@search[:keywords])
     else
       @articles = Article.limit(5).order("RANDOM()")
     end
