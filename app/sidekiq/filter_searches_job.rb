@@ -7,7 +7,7 @@ class FilterSearchesJob
     
     searched_at = search.created_at
     searches = Search.where(created_at: (searched_at - 30.seconds)..searched_at)
-    keywords_with_searches = searches.group_by {|search| search.keywords.delete(" ")[...-1]}
+    keywords_with_searches = searches.group_by(&:keywords)
 
     keywords_with_searches.each do |keywords, searches|
       if keywords_with_searches.keys.any?(/^#{keywords}.+/)
