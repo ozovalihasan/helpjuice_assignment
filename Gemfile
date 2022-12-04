@@ -78,3 +78,4 @@ end
 gem 'faker', '~> 3.0'
 gem 'factory_bot_rails', '~> 6.2'
 gem 'sidekiq', '~> 7.0', '>= 7.0.2'
+gem 'rubocop', '>= 1.0', '< 2.0'
