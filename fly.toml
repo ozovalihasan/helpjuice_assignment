@@ -1,6 +1,6 @@
-# fly.toml file generated for hidden-feather-1053 on 2022-12-04T09:50:03+03:00
+# fly.toml file generated for helpjuice-assignment on 2022-12-04T10:44:53+03:00
 
-app = "hidden-feather-1053"
+app = "helpjuice-assignment"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
