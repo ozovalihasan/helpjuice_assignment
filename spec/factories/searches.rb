@@ -5,7 +5,7 @@ FactoryBot.define do
 end
 
 FactoryBot.define do
-  factory :mock_search, class: "Search" do
+  factory :mock_search, class: 'Search' do
     sequence(:keywords) { |n| "keywords_#{n}" }
   end
 end

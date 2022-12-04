@@ -1,7 +1,7 @@
 class Articles::SearchesController < ApplicationController
   def index
     @keywords = search_params[:keywords]
-    
+
     if @keywords.present?
       @search = Search.create(search_params)
       FilterSearchesJob.perform_async(@search.id)
@@ -12,7 +12,7 @@ class Articles::SearchesController < ApplicationController
   end
 
   private
-  
+
   def search_params
     params.permit(:keywords)
   end

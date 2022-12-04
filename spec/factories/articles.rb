@@ -6,7 +6,7 @@ FactoryBot.define do
 end
 
 FactoryBot.define do
-  factory :mock_article, class: "Article" do
+  factory :mock_article, class: 'Article' do
     sequence(:title) { |n| "title_#{n}" }
     sequence(:body) { |n| "body_#{n} keywords_#{n}" }
   end
