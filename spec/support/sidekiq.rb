@@ -1,1 +1,1 @@
-require "sidekiq/testing"
+require 'sidekiq/testing'
