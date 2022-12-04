@@ -1,0 +1,52 @@
+<turbo-frame class="flex items-center gap-2" >
+
+  <%= form_with(
+    url: articles_searches_path,
+    method: :get,
+    data: {
+      turbo_frame: "results",
+      controller: "search-form"
+    },
+    class: "self-center"
+  ) do |form| %>
+    <%= 
+      form.text_field :keywords, 
+        placeholder: 'Search articles', 
+        minlength:3,
+        class: "w-96 rounded-xl p-4 text-xl self-center shadow-none border-2 border-solid",
+        data: {
+          action: "input->search-form#search"
+        }
+    %>
+
+  <% end %>
+
+  <%= link_to "Keywords", articles_keywords_path, class: "border border-solid rounded-lg p-4 text-xl" ,data: {turbo_frame: "results"} %>
+</turbo-frame>
+
+<turbo-frame id="results" class="min-w-96 w-1/2">
+  
+  <div class="py-8 border-b border-solid text-xl">
+    <% if @keywords.present? %>
+      Results for "<%= @keywords %>"
+    <% else %>
+      Last articles
+    <% end %>
+  </div>
+
+  <% if @articles.empty? %>
+    There is no an article to show.
+  <% else %>
+    
+    <% @articles.map do |article| %>
+      <div class="py-4">
+        <div class="text-lg"> <%= article.title %> </div>
+        <div> <%= article.body %> </div>
+      </div>
+    <% end %>
+
+  <% end %>
+  
+  
+  
+</turbo-frame>

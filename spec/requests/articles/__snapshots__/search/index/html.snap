@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HelpjuiceAssignment</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+    
+    <link rel="stylesheet" href="/assets/tailwind-a3dc437e1c6e6334544ca4a765f0ad57f7e06022b728c034151a9541f2fefc9b.css" data-turbo-track="reload" />
+<link rel="stylesheet" href="/assets/inter-font-8c3e82affb176f4bca9616b838d906343d1251adc8408efe02cf2b1e4fcf2bc4.css" data-turbo-track="reload" />
+
+    <link rel="stylesheet" href="/assets/application-3618cfd625ad804506b8311e6f99adecea4a2f62c6219d2d4fa7952685ee0aa8.css" data-turbo-track="reload" />
+    <script type="importmap" data-turbo-track="reload">{
+  "imports": {
+    "application": "/assets/application-37f365cbecf1fa2810a8303f4b6571676fa1f9c56c248528bc14ddb857531b95.js",
+    "@hotwired/turbo-rails": "/assets/turbo.min-7ab2ea9f35bae4a4d65b552f9b93524099f267a8ba3a2e07002aaa7bff8ae4cf.js",
+    "@hotwired/stimulus": "/assets/stimulus.min-d03cf1dff41d6c5698ec2c5d6a501615a7a33754dbeef8d1edd31c928d17c652.js",
+    "@hotwired/stimulus-loading": "/assets/stimulus-loading-1fc59770fb1654500044afd3f5f6d7d00800e5be36746d55b94a2963a7a228aa.js",
+    "controllers/application": "/assets/controllers/application-368d98631bccbf2349e0d4f8269afb3fe9625118341966de054759d96ea86c7e.js",
+    "controllers/hello_controller": "/assets/controllers/hello_controller-549135e8e7c683a538c3d6d517339ba470fcfb79d62f738a0a089ba41851a554.js",
+    "controllers": "/assets/controllers/index-e5a0647beb176af13135138d0d135e3af4272375a776bbc1a710f55bc42e94d2.js",
+    "controllers/search_form_controller": "/assets/controllers/search_form_controller-caafb9df2aa11d231b0a6bd1ef407a5f5aabc689b0cf55143b21f952af2b6684.js"
+  }
+}</script>
+<link rel="modulepreload" href="/assets/application-37f365cbecf1fa2810a8303f4b6571676fa1f9c56c248528bc14ddb857531b95.js">
+<link rel="modulepreload" href="/assets/turbo.min-7ab2ea9f35bae4a4d65b552f9b93524099f267a8ba3a2e07002aaa7bff8ae4cf.js">
+<link rel="modulepreload" href="/assets/stimulus.min-d03cf1dff41d6c5698ec2c5d6a501615a7a33754dbeef8d1edd31c928d17c652.js">
+<link rel="modulepreload" href="/assets/stimulus-loading-1fc59770fb1654500044afd3f5f6d7d00800e5be36746d55b94a2963a7a228aa.js">
+<script src="/assets/es-module-shims.min-d89e73202ec09dede55fb74115af9c5f9f2bb965433de1c2446e1faa6dac2470.js" async="async" data-turbo-track="reload"></script>
+<script type="module">import "application"</script>
+  </head>
+
+  <body class="font-sans">
+    <main class="mx-auto mt-16 px-5 flex flex-col items-center ">
+      <turbo-frame class="flex items-center gap-2" >
+
+  <form class="self-center" data-turbo-frame="results" data-controller="search-form" action="/articles/searches" accept-charset="UTF-8" method="get">
+    <input placeholder="Search articles" minlength="3" class="w-96 rounded-xl p-4 text-xl self-center shadow-none border-2 border-solid" data-action="input-&gt;search-form#search" type="text" name="keywords" id="keywords" />
+
+</form>
+  <a class="border border-solid rounded-lg p-4 text-xl" data-turbo-frame="results" href="/articles/keywords">Keywords</a>
+</turbo-frame>
+
+<turbo-frame id="results" class="min-w-96 w-1/2">
+  
+  <div class="py-8 border-b border-solid text-xl">
+      Last articles
+  </div>
+
+    
+      <div class="py-4">
+        <div class="text-lg"> title_2 </div>
+        <div> body_2 keywords_2 </div>
+      </div>
+      <div class="py-4">
+        <div class="text-lg"> title_1 </div>
+        <div> body_1 keywords_1 </div>
+      </div>
+
+  
+  
+  
+</turbo-frame>
+    </main>
+  </body>
+</html>

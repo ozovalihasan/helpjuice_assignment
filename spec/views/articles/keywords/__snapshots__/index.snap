@@ -1,0 +1,14 @@
+<turbo-frame id="results" class="min-w-96 w-1/2">
+    
+  <div class="my-8">
+      <div class="py-4 flex items-center hover:bg-gray-100">
+        <div class="text-lg"> keywords_1 </div>
+        <div class="text-lg ml-auto"> 2020-10-01 00:00:00 UTC </div>
+      </div>
+      <div class="py-4 flex items-center hover:bg-gray-100">
+        <div class="text-lg"> keywords_2 </div>
+        <div class="text-lg ml-auto"> 2020-10-01 00:00:00 UTC </div>
+      </div>
+  </div>
+  
+</turbo-frame>

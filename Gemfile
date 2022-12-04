@@ -67,3 +67,14 @@ group :development do
   # gem "spring"
 end
 
+group :test do
+  gem 'rspec-rails', '~> 6.0', '>= 6.0.1'
+  gem 'rails-controller-testing'
+  gem 'rspec-snapshot'
+  gem 'capybara'
+  gem 'webdrivers', '~> 5.2'
+end
+
+gem 'faker', '~> 3.0'
+gem 'factory_bot_rails', '~> 6.2'
+gem 'sidekiq', '~> 7.0', '>= 7.0.2'
