@@ -32,7 +32,7 @@ Please [check](https://helpjuice-assignment.fly.dev/).
 - Clone this repository
 - Open a terminal window
 - Change directory by using `cd helpjuice-assignment/`
-- Run `bin/rails db:setup`
+- Run `bin/setup`
 - Run `bin/rails db:migrate`
 - Run `bin/rails db:seed`
 - Run your `redis-server` because Sidekiq is used to handle background jobs and it connects to Redis
